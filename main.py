@@ -3,11 +3,11 @@ import time
 import psycopg2
 from src.api import HH
 from src.dbmanager import DBManager
-from src.utils import create_tables, drop_table, loads_into_table, creat_db
+from src.utils import create_tables, drop_table, loads_into_table, create_db
 
 
 def main():
-    creat_db()
+    create_db()
     # Устанавливаем соединение с конфиг файлом
     conn = psycopg2.connect(host='localhost', database='hh', user='postgres', password='')
     drop_table(conn, 'vacancies')  # удаляем таблицу vacancies

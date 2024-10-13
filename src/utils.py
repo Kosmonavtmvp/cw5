@@ -51,7 +51,7 @@ def drop_table(conn, table_name) -> None:
             print(f'из базы данных удалена таблица {table_name}')
 
 
-def creat_db():
+def create_db():
     """Создание базы данных"""
     conn = psycopg2.connect(host='localhost', user='postgres', password='')
     cursor = conn.cursor()
